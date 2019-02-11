@@ -2,8 +2,8 @@
 #
 ###########################################################################
 #                                                                         #
-# This script sends actual IP addresses of server                         #
-# to ddnss (https://www.ddnss.de). It manages IPv4 & IPv6.                #
+# This script sends actual IP addresses of a server or client to          #
+# DDNSS (https://www.ddnss.de). It manages IPv4 & IPv6 addresses.         #
 #                                                                         #
 # Script name: ddnss.sh                                                   #
 # Call       : ./ddnss.sh (root)                                          #
