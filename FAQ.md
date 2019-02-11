@@ -12,3 +12,16 @@ Example:
 ```
 $ (sudo) rm /usr/local/bin/ddnss/v*
 ```
+
+**Q:** How can I check the logfile?
+
+**A:** That is as easy as the rest:
+
+```
+$ (sudo) nano /path/to/ddnss/*.log
+```
+
+Example:
+```
+$ (sudo) nano /usr/local/bin/ddnss/*.log
+```
