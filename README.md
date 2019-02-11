@@ -2,7 +2,7 @@
 Script is posting current IP addresses of a server or client to DynDNSService.
 
 ## Purpose
-This setup is intendent to use with (private) hardware behind an account with changing IP addresses. To make the server or client available from internet.
+This setup is intendent to use with (private) hardware behind an account with changing IP addresses. To make the server or client available from internet. [DynDNS Service](https://ddnss.de) provides constant domain name even though your IP addresses are changing.
 
 ## Requirements
 1. An account at [DynDNS Service](https://ddnss.de)
