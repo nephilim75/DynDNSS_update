@@ -11,7 +11,7 @@ This setup is intendent to use with (private) hardware behind an account with ch
 
 ## HowTo
 1. Copy the script to a directory of your choice. E.g. `/usr/local/bin/ddnss`.
-2. Add a cron job to `root`'s crontab
+2. Add a cron job to `root`'s crontab to trigger the script.
 
 ```
 */10 * * * * /path/to/ddnss.sh > /dev/null 2>&1
