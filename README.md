@@ -2,12 +2,12 @@
 Script is posting current IP addresses of a server or client to DynDNSService.
 
 ## Purpose
-This setup is intendent to be used with (private) hardware behind an account with changing IP addresses. To make the server or client available from internet. [DynDNS Service](https://ddnss.de) provides constant domain name even though your IP addresses are changing.
+This setup is intendent to be used with (private) hardware behind an account with changing IP addresses. To make the server or client available from internet. [DynDNS Service](https://ddnss.de) (DDNSS) provides constant domain name even though your IP addresses are changing.
 
 The simple but robust scripts are logging all events with meaningful and understandable comments and are doing checks against the DDNSS server to ensure the update success.
 
 ## Requirements
-1. An account at [DynDNS Service](https://ddnss.de)
+1. An account at [DynDNS Service](https://ddnss.de).
 2. Created host and its host name.
 3. Valid update key. You'll find it on DDNSS's dashboard on the left bottom corner.
 
@@ -22,7 +22,7 @@ HOST="host.name.tld"
 WDIR="/path/to/ddnss"
 ```
 
-**Example:**
+Example:
 ```
 # Define variables DDNSS (user input)
 KEYAUTH="ljaeirio3v536ijuagfiu"
@@ -37,9 +37,9 @@ WDIR="/usr/local/bin/ddnss"
 */10 * * * * /path/to/ddnss.sh > /dev/null 2>&1
 ```
 
-**Example:**
+Example:
 ```
 */10 * * * * /usr/local/bin/ddnss/ddnss.sh > /dev/null 2>&1
 ```
 
-**That's it**
+**That's it**.
