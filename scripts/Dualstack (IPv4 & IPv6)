@@ -15,7 +15,7 @@
 ###########################################################################
 
 # Define variables DDNSS (user input)
-KEYAUTH="AuthKey provided by DDNSS"
+KEYAUTH="UpdateKey provided by DDNSS"
 HOST="host.name.tld"
 WDIR="/path/to/ddnss"
 
