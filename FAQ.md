@@ -12,6 +12,7 @@ Example:
 ```
 $ (sudo) rm /usr/local/bin/ddnss/v*
 ```
+</br>
 
 #### **Q:** How can I check the logfile?
 
