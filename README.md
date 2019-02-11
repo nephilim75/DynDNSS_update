@@ -13,7 +13,3 @@ This setup is intendent to use with (private) hardware behind an account with ch
 3. Valid update key. You'll find it on DDNSS's dashboard on the left bottom corner.<br />
 <br />
 <br />
-## How To
-
-1. Create an account at [DynDNS Service](https://ddnss.de).
-Put the script to a path of your choice. For example to `/usr/local/bin/ddnss`
