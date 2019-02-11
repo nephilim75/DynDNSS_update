@@ -1,5 +1,5 @@
 # DynDNSS_update
-Script is posting current IP addresses of a server or client to DynDNSService.
+Script is posting current IP addresses of a server or client to [DynDNSService](https://ddnss.de).
 
 ## Purpose
 This setup is intendent to be used with (private) hardware behind an account with changing IP addresses. To make the server or client available from internet. [DynDNS Service](https://ddnss.de) (DDNSS) provides constant domain name even though your IP addresses are changing.
