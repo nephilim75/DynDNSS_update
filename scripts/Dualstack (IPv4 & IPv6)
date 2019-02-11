@@ -46,7 +46,7 @@ IPv4="$(curl -s -4 -L https://ip.pc-fee.com || echo "")"
 IPv6="$(curl -s -6 -L https://ip.pc-fee.com || echo "")"
 
 # Check if IP addresses needs to be updated.
-if [ "$oldIPv4" = "$IPv4" ] && [ "$oldIPv6 = $IPv6" ]
+if [ "$oldIPv4" = "$IPv4" ] && [ "$oldIPv6" = "$IPv6" ]
 then
         echo "$LOGSTMP IP addresses don't differ. No update required." >> $LOG
 else
