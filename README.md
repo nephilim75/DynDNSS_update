@@ -13,7 +13,25 @@ The simple but robust scripts are logging all events with meaningful and underst
 
 ## HowTo
 1. Copy the script to a directory of your choice. E.g. `/usr/local/bin/ddnss`.
-2. Add a cron job to `root`'s crontab to trigger the script.
+2. Update the scripts according to your needs.
+
+```
+# Define variables DDNSS (user input)
+KEYAUTH="UpdateKey provided by DDNSS"
+HOST="host.name.tld"
+WDIR="/path/to/ddnss"
+```
+
+**Example:**
+```
+# Define variables DDNSS (user input)
+KEYAUTH="ljaeirio3v536ijuagfiu"
+HOST="myserver.ddnss.org"
+WDIR="/usr/local/bin/ddnss"
+```
+
+
+3. Add a cron job to `root`'s crontab to trigger the script.
 
 ```
 */10 * * * * /path/to/ddnss.sh > /dev/null 2>&1
