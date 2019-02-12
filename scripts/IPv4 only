@@ -45,8 +45,8 @@ else
         echo "$LOGSTMP IP address differs. Update required." >> $LOG
         echo "$LOGSTMP Updating..." >> $LOG
 
-        # Send new address(es) to DDNSS and catch the reply.
-        wget -q -O - 'https://www.ddnss.de/upd.php?key='$KEYAUTH'&host='$HOST'&ip='$IPv4 > $WDIR/ddnssReply
+        # Send new address to DDNSS and catch the reply.
+        wget -q -O - 'https://ip4.ddnss.de/upd.php?key='$KEYAUTH'&host='$HOST > $WDIR/ddnssReply
 
         # Check the reply of DDNSS for success.
         REPLY="$(awk '/Updated/ {print $3,$4,$5}' $WDIR/ddnssReply | cut -d ">" -f2 | cut -d "<" -f1)"
