@@ -10,8 +10,8 @@ Our scripts support [IPv4](https://github.com/nephilim75/DynDNSS_update/blob/mas
 
 ## Requirements
 1. An account at [DynDNS Service](https://ddnss.de).
-2. Created host and its host name.
-3. Valid update key. You'll find it on DDNSS's dashboard on the left bottom corner.
+2. Created host and its **host name**.
+3. Valid **update key**. You'll find it on DDNSS's dashboard on the left bottom corner.
 
 ## HowTo
 1. Copy the script to a directory of your choice. E.g. `/usr/local/bin/ddnss`.
