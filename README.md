@@ -6,7 +6,7 @@ This setup is intendent to be used with (private) hardware behind an ISP account
 
 The simple but robust scripts are logging all events with meaningful and understandable comments and are doing checks against the DDNSS server to ensure the update success.
 
-Our scripts support IPv4, IPv6 and IPv4 & IPv6 (DualStack).
+Our scripts support [IPv4](), [IPv6]() and [IPv4&IPv6]() (DualStack).
 
 ## Requirements
 1. An account at [DynDNS Service](https://ddnss.de).
