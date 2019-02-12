@@ -6,7 +6,7 @@ This setup is intendent to be used with (private) hardware behind an ISP account
 
 The simple but robust scripts are logging all events with meaningful and understandable comments and are doing checks against the DDNSS server to ensure the update success.
 
-Our scripts support [IPv4](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/IPv4%20only), [IPv6](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/IPv6%20only) and [IPv4&IPv6](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/Dualstack%20(IPv4%20%26%20IPv6)) (DualStack).
+Our scripts support [IPv4](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/IPv4%20only) only, [IPv6](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/IPv6%20only) only and both [IPv4&IPv6](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/Dualstack%20(IPv4%20%26%20IPv6)) (DualStack).
 
 ## Requirements
 1. An account at [DynDNS Service](https://ddnss.de).
