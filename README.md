@@ -41,7 +41,7 @@ $ (sudo) chmod 700 /usr/local/bin/ddnss/ddnss.sh
 
 ```
 # Define variables DDNSS (user input)
-KEYAUTH="UpdateKey provided by DDNSS"
+KEY="UpdateKey provided by DDNSS"
 HOST="host.name.tld"
 WDIR="/path/to/ddnss"
 ```
@@ -49,7 +49,7 @@ WDIR="/path/to/ddnss"
 Example:
 ```
 # Define variables DDNSS (user input)
-KEYAUTH="ljaeirio3v536ijuagfiu"
+KEY="ljaeirio3v536ijuagfiu"
 HOST="myserver.ddnss.org"
 WDIR="/usr/local/bin/ddnss"
 ```
