@@ -62,7 +62,7 @@ else
 
         if [ "$REPLY" = "$SUCCESS" ]
         then
-                echo "$LOGSTMP DDNSS replies: $SUCCESS" >> $LOG
+                echo "$LOGSTMP DDNSS replied: $SUCCESS" >> $LOG
 
                 # Write current IP addresses to check file. Add DDNSS reply to logfile and clean $WDIR from DDNSS reply.
                 echo "$IPv4" > $WDIR/v4update.txt
