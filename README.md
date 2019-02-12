@@ -14,8 +14,8 @@ Our scripts support [IPv4](https://github.com/nephilim75/DynDNSS_update/blob/mas
 3. Valid **update key**. You'll find it on DDNSS's dashboard on the left bottom corner.
 
 ## HowTo
-1. Copy the script to a directory of your choice. E.g. `/usr/local/bin/ddnss`.
-2. Give the script you've choosen the name `ddnss.sh` and paste the copied content into it.
+**1.** Copy the script to a directory of your choice. E.g. `/usr/local/bin/ddnss`.
+**2.** Give the script you've choosen the name `ddnss.sh` and paste the copied content into it.
 ```
 $ (sudo) nano /path/to/ddnss/ddnss.sh
 ```
@@ -25,7 +25,7 @@ Example:
 $ (sudo) nano /usr/local/bin/ddnss/ddnss.sh
 ```
 
-3. Make `ddnss.sh` executable for `root`.
+**3.** Make `ddnss.sh` executable for `root`.
 ```
 $ (sudo) chown root:root /path/to/ddnss/ddnss.sh
 $ (sudo) chmod u+x /path/to/ddnss/ddnss.sh
@@ -37,7 +37,7 @@ $ (sudo) chown root:root /usr/local/bin/ddnss/ddnss.sh
 $ (sudo) chmod u+x /usr/local/bin/ddnss/ddnss.sh
 ```
 
-4. Update the scripts according to your needs.
+**4.** Update the scripts according to your needs.
 
 ```
 # Define variables DDNSS (user input)
@@ -55,7 +55,7 @@ WDIR="/usr/local/bin/ddnss"
 ```
 
 
-5. Add a cron job to `root`'s crontab to trigger the script.
+**5.** Add a cron job to `root`'s crontab to trigger the script.
 
 ```
 */10 * * * * /path/to/ddnss.sh > /dev/null 2>&1
