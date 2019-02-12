@@ -28,13 +28,13 @@ $ (sudo) nano /usr/local/bin/ddnss/ddnss.sh
 **3.** Make `ddnss.sh` executable for `root`.
 ```
 $ (sudo) chown root:root /path/to/ddnss/ddnss.sh
-$ (sudo) chmod u+x /path/to/ddnss/ddnss.sh
+$ (sudo) chmod 700 /path/to/ddnss/ddnss.sh
 ```
 
 Example:
 ```
 $ (sudo) chown root:root /usr/local/bin/ddnss/ddnss.sh
-$ (sudo) chmod u+x /usr/local/bin/ddnss/ddnss.sh
+$ (sudo) chmod 700 /usr/local/bin/ddnss/ddnss.sh
 ```
 
 **4.** Update the scripts according to your needs.
