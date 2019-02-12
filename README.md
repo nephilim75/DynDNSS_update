@@ -15,7 +15,16 @@ Our scripts support [IPv4](https://github.com/nephilim75/DynDNSS_update/blob/mas
 
 ## HowTo
 1. Copy the script to a directory of your choice. E.g. `/usr/local/bin/ddnss`.
-2. Give the script you've choosen the name `ddnss.sh`.
+2. Give the script you've choosen the name `ddnss.sh` and paste the copied content into it.
+```
+$ (sudo) nano /path/to/ddnss/ddnss.sh
+```
+
+Example:
+```
+$ (sudo) nano /usr/local/bin/ddnss/ddnss.sh
+```
+
 3. Make `ddnss.sh` executable for `root`.
 ```
 $ (sudo) chown root:root /path/to/ddnss/ddnss.sh
