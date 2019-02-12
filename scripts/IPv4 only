@@ -1,1 +1,72 @@
-Is coming soon
+#!/bin/bash
+#
+###########################################################################
+#                                                                         #
+# This script sends actual IP addresses of a server or client to          #
+# DDNSS (https://www.ddnss.de). It manages IPv4 only.                     #
+#                                                                         #
+# Script name: ddnss.sh                                                   #
+# Call       : ./ddnss.sh (root)                                          #
+# Author     : pc-fee.com                                                 #
+# Date       : 02/10/2019 (mm/dd/yyyy)                                    #
+# License    : GNU GPLv3                                                  #
+# Version    : 2.1                                                        #
+#                                                                         #
+###########################################################################
+
+# Define variables DDNSS (user input)
+KEYAUTH="UpdateKey provided by DDNSS"
+HOST="host.name.tld"
+WDIR="/path/to/ddnss"
+
+# Define variables for logfile
+LOG="$WDIR/dyndnsUpdate.log"
+LOGSTMP="$(date):"
+
+### Start *First run check* ###
+# Check if v4update.txt exists
+if [ ! -f $WDIR/v4update.txt ]
+then
+        echo "1" > $WDIR/v4update.txt
+fi
+### End *First run check* ###
+
+# Fetch old IP addresses.
+oldIPv4="$(cat $WDIR/v4update.txt)"
+
+# Fetch current IP addresses.
+IPv4="$(curl -s -4 -L https://ip.pc-fee.com || echo "")"
+
+# Check if IP addresses needs to be updated.
+if [ "$oldIPv4" = "$IPv4" ]
+then
+        echo "$LOGSTMP IP address doesn't differ. No update required." >> $LOG
+else
+        echo "$LOGSTMP IP address differs. Update required." >> $LOG
+        echo "$LOGSTMP Updating..." >> $LOG
+
+        # Send new address(es) to DDNSS and catch the reply.
+        wget -q -O - 'https://www.ddnss.de/upd.php?key='$KEYAUTH'&host='$HOST'&ip='$IPv4 > $WDIR/ddnssReply
+
+        # Check the reply of DDNSS for success.
+        REPLY="$(awk '/Updated/ {print $3,$4,$5}' $WDIR/ddnssReply | cut -d ">" -f2 | cut -d "<" -f1)"
+        SUCCESS="Updated 1 hostname."
+
+        if [ "$REPLY" = "$SUCCESS" ]
+        then
+                echo "$LOGSTMP DDNSS replied: $SUCCESS" >> $LOG
+
+                # Write current IP addresses to check file. Add DDNSS reply to logfile and clean $WDIR from DDNSS reply.
+                echo "$IPv4" > $WDIR/v4update.txt
+                echo "$LOGSTMP $HOST has been updated successfully." >> $LOG
+                rm $WDIR/ddnssReply
+        else
+                echo "$LOGSTMP Update failed. Check $WDIR/dyndnsReply for further information." >> $LOG
+        fi
+fi
+
+# Keeping logfile clean and small.
+tail -n 150 $LOG > $WDIR/tmp_log
+mv $WDIR/tmp_log $LOG
+
+exit 0
