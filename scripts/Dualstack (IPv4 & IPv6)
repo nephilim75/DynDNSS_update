@@ -15,7 +15,7 @@
 ###########################################################################
 
 # Define variables DDNSS (user input)
-KEYAUTH="UpdateKey provided by DDNSS"
+KEY="UpdateKey provided by DDNSS"
 HOST="host.name.tld"
 WDIR="/path/to/ddnss"
 
@@ -54,7 +54,7 @@ else
         echo "$LOGSTMP Updating..." >> $LOG
 
         # Send new address(es) to DDNSS and catch the reply.
-        wget -q -O - 'https://www.ddnss.de/upd.php?key='$KEYAUTH'&host='$HOST'&ip='$IPv4'&ip6='$IPv6 > $WDIR/ddnssReply
+        wget -q -O - 'https://www.ddnss.de/upd.php?key='$KEY'&host='$HOST'&ip='$IPv4'&ip6='$IPv6 > $WDIR/ddnssReply
 
         # Check the reply of DDNSS for success.
         REPLY="$(awk '/Updated/ {print $3,$4,$5}' $WDIR/ddnssReply | cut -d ">" -f2 | cut -d "<" -f1)"
