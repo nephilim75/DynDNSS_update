@@ -4,7 +4,7 @@ Script is posting current IP addresses of a server or client to [DynDNSService](
 ## Purpose
 This setup is intendent to be used with (private) hardware behind an ISP account with changing IP addresses. This helps to make the server or client available from internet. [DynDNS Service](https://ddnss.de) (DDNSS) provides constant domain name even though your IP addresses are changing.
 
-The simple but robust scripts are logging all events with meaningful and understandable comments and are doing checks against the DDNSS server to ensure the update success.
+The simple but robust shell scripts are logging all events with meaningful and understandable comments and are doing checks against the DDNSS server to ensure the update success.
 
 Our scripts support [IPv4](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/IPv4%20only) only, [IPv6](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/IPv6%20only) only and both [IPv4&IPv6](https://github.com/nephilim75/DynDNSS_update/blob/master/scripts/Dualstack%20(IPv4%20%26%20IPv6)) (DualStack).
 
