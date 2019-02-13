@@ -12,7 +12,7 @@ Our scripts support [IPv4](https://github.com/nephilim75/DynDNSS_update/blob/mas
 1. An account at [DynDNS Service](https://ddnss.de).
 2. Created host and its **host name**.
 3. Valid **update key**. You'll find it on DDNSS's dashboard on the left bottom corner.
-4. `wget` and `curl` installed
+4. `wget` and `curl` installed.
 
 ## HowTo
 **1.** Copy the script to a directory of your choice. Example: `/usr/local/bin/ddnss`.</br></br>
